@@ -150,3 +150,24 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #91bd
 .nav:active{transform:translateX(3px)}
 @media(max-width:700px){.brand b{font-size:19px}.hero h1{font-size:clamp(49px,13vw,66px);letter-spacing:-3px}}
 @media(prefers-reduced-motion:reduce){body::before,body::after,.brand-icon{animation:none!important}}
+
+
+/* Visible falling snowflake emoji for Telegram Mini App and web */
+body::before,body::after{
+  content:"❄       ❄          ❄       ❄         ❄       ❄          ❄       ❄";
+  position:fixed;left:0;top:-110vh;width:100%;height:220vh;
+  z-index:40;pointer-events:none;white-space:pre-wrap;overflow:hidden;
+  display:block;font-family:Arial,sans-serif;font-size:21px;line-height:118px;
+  letter-spacing:5px;color:#83baff;text-shadow:0 1px 8px #ffffffb8;
+  background:none!important;opacity:.72;animation:emoji-snow-fall 18s linear infinite;
+}
+body::after{
+  content:"   ❄          ❄       ❄          ❄       ❄         ❄          ❄      ❄";
+  font-size:15px;line-height:153px;letter-spacing:9px;color:#d78bb8;
+  opacity:.52;animation-duration:27s;animation-delay:-13s;
+}
+@keyframes emoji-snow-fall{
+  from{transform:translate3d(-12px,0,0)}
+  to{transform:translate3d(22px,100vh,0)}
+}
+@media(prefers-reduced-motion:reduce){body::before,body::after{animation:none!important}}

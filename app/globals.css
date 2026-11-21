@@ -171,3 +171,14 @@ body::after{
   to{transform:translate3d(22px,100vh,0)}
 }
 @media(prefers-reduced-motion:reduce){body::before,body::after{animation:none!important}}
+
+
+/* Repeat the emoji in staggered rows so the full viewport gets snowfall */
+body::before{
+  content:"❄      ❄       ❄      ❄       ❄      ❄\A   ❄       ❄      ❄       ❄      ❄       ❄\A❄      ❄       ❄      ❄       ❄      ❄\A   ❄       ❄      ❄       ❄      ❄       ❄\A❄      ❄       ❄      ❄       ❄      ❄\A   ❄       ❄      ❄       ❄      ❄       ❄\A❄      ❄       ❄      ❄       ❄      ❄\A   ❄       ❄      ❄       ❄      ❄       ❄\A❄      ❄       ❄      ❄       ❄      ❄\A   ❄       ❄      ❄       ❄      ❄       ❄\A❄      ❄       ❄      ❄       ❄      ❄\A   ❄       ❄      ❄       ❄      ❄       ❄";
+  white-space:pre;line-height:118px;letter-spacing:2px;
+}
+body::after{
+  content:"  ❄          ❄        ❄          ❄        ❄\A❄          ❄        ❄          ❄        ❄\A  ❄          ❄        ❄          ❄        ❄\A❄          ❄        ❄          ❄        ❄\A  ❄          ❄        ❄          ❄        ❄\A❄          ❄        ❄          ❄        ❄\A  ❄          ❄        ❄          ❄        ❄\A❄          ❄        ❄          ❄        ❄\A  ❄          ❄        ❄          ❄        ❄\A❄          ❄        ❄          ❄        ❄";
+  white-space:pre;line-height:153px;letter-spacing:3px;
+}
